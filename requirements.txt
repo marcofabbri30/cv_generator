@@ -1,0 +1,3 @@
+fastapi[all]
+weasyprint==56.1
+jinja2
