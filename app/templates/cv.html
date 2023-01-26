@@ -6,6 +6,9 @@
   <title>poltronesofà S.p.A. - Etichetta Stock Management</title>
   <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
   <style>
+    .logo_pes{
+      height: 150px;
+    }
   </style>
 </head>
 
@@ -13,7 +16,7 @@
   <main>
     <div class="header" style="position: relative; background-color: red; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
         <div style="position: absolute; top:1cm; left: 1cm; width: 120px;">
-            <img class="logo" src="{{ url_for('static', path='/profile2.jpg') }}" alt="{{ url_for('static', path='/profile.jpg') }}">
+          <img class="logo_pes" src={{ logo_pes }} alt={{ logo_pes }}>
         </div>
         
         <div style="position: absolute; top:1cm; left: 7cm">
@@ -21,12 +24,13 @@
             <h3>Fullstack software Engineer - Project Manager</h3>
         </div>
     </div>
-    <div class="a" style="height: 100px;">
-       
-        <h6>Informazioni personali:</h6>
-        <p>Nome</p>
-        
-    </div>
+      <h2>Informazioni personali:</h2>
+      <p>Nome: Marco Fabbri</p>
+      <p>Data di nascita: 26/12/1991</p>
+      <p>Luogo di nascita: Rimini(RN)</p>
+      <p>Residenza: Forlì(FC)</p>
+      <h2>Riepilogo:</h2>
+      <p>Appassionato di tecnologia, sono uno sviluppatore software aanalista IT. Il mio obiettivo è migliorare e supportare i processi aziendaliattraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, businessintelligence e project management.</p>
   </main>
 </body>
 </html>
