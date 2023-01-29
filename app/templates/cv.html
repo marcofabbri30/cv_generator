@@ -7,15 +7,18 @@
   <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
   <style>
     .logo_pes{
-      height: 150px;
+      height: 170px;
+    }
+    .title-section {
+      border-bottom: 3px solid black;
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="header" style="position: relative; background-color: red; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
-        <div style="position: absolute; top:1cm; left: 1cm; width: 120px;">
+    <div class="header" style="position: relative; background-color:  #293133; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
+        <div style="position: absolute; top:0.7cm; left: 1.5cm; width: 120px;">
           <img class="logo_pes" src={{ logo_pes }} alt={{ logo_pes }}>
         </div>
         
@@ -24,13 +27,35 @@
             <h3>Fullstack software Engineer - Project Manager</h3>
         </div>
     </div>
+    <section>
       <h2>Informazioni personali:</h2>
       <p>Nome: Marco Fabbri</p>
-      <p>Data di nascita: 26/12/1991</p>
-      <p>Luogo di nascita: Rimini(RN)</p>
+      <p>Data e luogo di nascita: 26/12/1991 - Rimini(RN)</p>
       <p>Residenza: Forlì(FC)</p>
+      <p style="display: inline;">Email:</p> <a href="mailto:marco.fabbri30@gmail.com">marco.fabbri30@gmail.com</a><br>
+      <p style="display: inline;">Telefono:</p> <a href="tel:+393458201939">+39 345-8201393</a>
+    </section>
+    <section>
       <h2>Riepilogo:</h2>
-      <p>Appassionato di tecnologia, sono uno sviluppatore software aanalista IT. Il mio obiettivo è migliorare e supportare i processi aziendaliattraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, businessintelligence e project management.</p>
-  </main>
+      <p>Appassionato di tecnologia, sono uno sviluppatore software e analista IT. Il mio obiettivo è migliorare e supportare i processi aziendali attraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, business intelligence e project management.</p>  
+    </section>
+    <section>
+      <h2 class="title-section">Esperienze professionali:</h2>
+      <div>
+        <p>poltronesofà - 03/2021 &rarr; presente</p>
+        <p>Analista e sviluppatore software per il miglioramento dei processi di business.
+          Sviluppo di microservizi per l'integrazione con i terzisti, i negozi, i servizi di
+          logistica con framework FastAPI in linguaggio Python e Vue.js, sviluppo del
+          sistema di reportistica e stampe, database Oracle, Docker, test automatici,
+          sistema di versionamento Git e Gitlab; sviluppo di software customizzato
+          con framework Flask (linguaggio Python); gestione e manutenzione del sito
+          aziendale e dei servizi web con tecnologie Microsoft .Net Framework, IIS, Sql
+          Server.
+          Sviluppo e manutenzione della Business Intelligence in Qlik Sense.</p>
+      </div>
+      <hr style="width: 90%;">
+    </section>
+    
+    </main>
 </body>
 </html>

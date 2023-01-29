@@ -27,10 +27,10 @@ def get_warranty(request: Request, background_tasks: BackgroundTasks):
   temp_file = [file_path]
   barcode_path: str = ""
   
-  logo_pes = RequestUtility().get_static_base_url(request) + "profile.jpg"
+  logo_pes = RequestUtility().get_static_base_url(request) + "profile5.jpg"
   css = RequestUtility().get_static_style_base_url(request) + "style_warranty.css"
   res = templates.TemplateResponse("cv.html", {"request": request,"logo_pes": logo_pes, 'css': css })
   html = HTML(string=res.body.decode("utf-8"))
   html.write_pdf(file_path)
   background_tasks.add_task(clear_file, temp_file)
-  return FileResponse(file_path, filename = f"CV_{datetime.now()}.pdf")
+  return FileResponse(file_path, filename = f"CV_{datetime.now()}.pdf", content_disposition_type='inline')
