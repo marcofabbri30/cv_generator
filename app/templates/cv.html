@@ -5,19 +5,23 @@
   <meta charset="utf-8">
   <title>poltronesofà S.p.A. - Etichetta Stock Management</title>
   <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', path='/fontawesome/css/fontawesome.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', path='/fontawesome/css/brands.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', path='/fontawesome/css/solid.css') }}" rel="stylesheet">
+
   <style>
     .logo_pes{
       height: 170px;
     }
     .title-section {
-      border-bottom: 3px solid black;
+      border-bottom: 2px solid black;
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="header" style="position: relative; background-color:  #293133; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
+    <div class="header" style="position: relative; background-color:  #313c4e; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
         <div style="position: absolute; top:0.7cm; left: 1.5cm; width: 120px;">
           <img class="logo_pes" src={{ logo_pes }} alt={{ logo_pes }}>
         </div>
@@ -26,6 +30,13 @@
             <h1>Marco Fabbri</h1>
             <h3>Fullstack software Engineer - Project Manager</h3>
         </div>
+    </div>
+    <div class="sub-header" style="background-color: #222a33;">
+      asdf
+      <i class="fa-solid fa-user"></i>
+      <!-- uses solid style -->
+      <i class="fa-brands fa-github-square"></i>
+      <!-- uses brand style -->
     </div>
     <section>
       <h2>Informazioni personali:</h2>
@@ -42,9 +53,9 @@
     <section>
       <h2 class="title-section">Esperienze professionali:</h2>
       <div>
-        <p>poltronesofà - Software Engineer</p>
-        <p>03/2021 &rarr; presente</p>
-        <p>Forlì (FC) - Emilia-Romagna</p>
+        <p>poltronesofà - Software Engineer <span style="float: right;">Forlì (FC) - Emilia-Romagna</span></p>
+        <p >03/2021 &rarr; presente </p>
+        <p></p>
         <p>Analista e sviluppatore software per il miglioramento dei processi di business.
           Sviluppo di microservizi per l'integrazione con i terzisti, i negozi, i servizi di
           logistica con framework FastAPI in linguaggio Python e Vue.js, sviluppo del
