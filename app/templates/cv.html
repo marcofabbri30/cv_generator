@@ -13,15 +13,22 @@
     .logo_pes{
       height: 170px;
     }
+
     .title-section {
       border-bottom: 2px solid black;
+    }
+
+    .summary-info{
+      float:left; 
+      margin:15px;
+      color:white
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="header" style="position: relative; background-color:  #313c4e; height: 220px; top:-1.2cm; left:-1.2cm;width: 21cm;">
+    <div class="header" style="position: relative; background-color:  #313c4e; height: 270px; top:-1.2cm; left:-1.2cm;width: 21cm;">
         <div style="position: absolute; top:0.7cm; left: 1.5cm; width: 120px;">
           <img class="logo_pes" src={{ logo_pes }} alt={{ logo_pes }}>
         </div>
@@ -30,14 +37,19 @@
             <h1>Marco Fabbri</h1>
             <h3>Fullstack software Engineer - Project Manager</h3>
         </div>
+        <div class="sub-header" style="background-color: #222a33; position: absolute; bottom:0px; left: 0px; width: 21cm;">
+          <div style="display: inline-block;">
+            <span class="summary-info">
+              <i class="fa-solid fa-envelope"></i> Email: marco.fabbri30@gmail.com
+            </span> 
+            <span class="summary-info" style="float: right;">
+              <i class="fa-sharp fa-solid fa-mobile"></i> Mobile: 345-8201393              
+            </span>
+          </div>          
+        </div>
+      </div>
     </div>
-    <div class="sub-header" style="background-color: #222a33;">
-      asdf
-      <i class="fa-solid fa-user"></i>
-      <!-- uses solid style -->
-      <i class="fa-brands fa-github-square"></i>
-      <!-- uses brand style -->
-    </div>
+    
     <section>
       <h2>Informazioni personali:</h2>
       <p>Nome: Marco Fabbri</p>
