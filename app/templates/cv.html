@@ -20,9 +20,18 @@
 
     .summary-info{
       float:left; 
-      margin:10px;
+      margin:6px;
       color:white
     }
+
+    .competenza{
+      background-color: #222a33;
+      border-radius: 1em;
+      color:white;
+      padding: 6px 10px;
+      font-family: Metropolis-Regular;
+    }
+    
   </style>
 </head>
 
@@ -59,7 +68,7 @@
               </td>
               <td style="padding-left:70px;">
                 <span class="summary-info">
-                  <i class="fa-solid fa-hospital"></i> Luogo di nascita: 26/12/1991
+                  <i class="fa-solid fa-hospital"></i> Luogo di nascita: Rimini (RN)
                 </span> 
               </td>
             </tr>
@@ -89,28 +98,70 @@
       <p style="display: inline;">Telefono:</p> <a href="tel:+393458201939">+39 345-8201393</a>
     </section> -->
     <section>
-      <h2>Riepilogo:</h2>
+      <h2>Profilo professionale:</h2>
       <p>Appassionato di tecnologia, sono uno sviluppatore software e analista IT. Il mio obiettivo è migliorare e supportare i processi aziendali attraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, business intelligence e project management.</p>  
     </section>
     <section>
       <h2 class="title-section">Esperienze professionali:</h2>
+      {% for item in data['esperienze_professionali'] %}
       <div>
-        <p>poltronesofà - Software Engineer <span style="float: right;">Forlì (FC) - Emilia-Romagna</span></p>
-        <p >03/2021 &rarr; presente </p>
-        <p></p>
-        <p>Analista e sviluppatore software per il miglioramento dei processi di business.
-          Sviluppo di microservizi per l'integrazione con i terzisti, i negozi, i servizi di
-          logistica con framework FastAPI in linguaggio Python e Vue.js, sviluppo del
-          sistema di reportistica e stampe, database Oracle, Docker, test automatici,
-          sistema di versionamento Git e Gitlab; sviluppo di software customizzato
-          con framework Flask (linguaggio Python); gestione e manutenzione del sito
-          aziendale e dei servizi web con tecnologie Microsoft .Net Framework, IIS, Sql
-          Server.
-          Sviluppo e manutenzione della Business Intelligence in Qlik Sense.</p>
+        <p class="role">poltronesofà - Software Engineer <span style="float: right;">03/2021 &rarr; presente</span></p>
+        <p>Forlì (FC) - Emilia-Romagna </p>
+        <ul>
+          <li>
+            Analista e sviluppatore software per il miglioramento dei processi di business.
+            Sviluppo di microservizi per l'integrazione con i terzisti, i negozi, i servizi di
+            logistica, gestione e manutenzione del sito aziendale e dei servizi web.
+          </li>
+          <li>Tecnologie utilizzate: FastAPI, Python, .Net Framework, Vue.js, database Oracle e Sql Server, Docker, sistema di versionamento Git e Gitlab, Flask, Apache Airflow, Linux</li>
+          <li>Sviluppo e manutenzione della Business Intelligence in Qlik Sense.</li>
+        </ul>
       </div>
       <hr style="width: 90%;">
     </section>
-    
+    <section>
+      <h2 class="title-section">Formazione:</h2>
+      <ul>
+        {% for item in data['formazione'] %}
+        <li>
+          <p><span style="font-family: Metropolis-Bold;">{{ item['titolo'] }}</span></p>
+          <p>{{ item['anno'] }} - {{ item['sede'] }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h2>Competenze informatiche</h2>
+      <table style="border-collapse: separate; border-spacing: 0 15px;">
+        <tr style="border-spacing:10px;">
+          <td style="width: 120px;">Linguaggi:</td>
+          <td>
+            {% for item in data['competenze_informatiche']['linguaggi'] %}
+            <span class="competenza">{{ item }}</span>
+            {% endfor %}
+        </tr>
+        <tr  style="border-spacing:10px;">
+          <td>Tecnologie:</td>
+          <td>
+            {% for item in data['competenze_informatiche']['tecnologie'] %}
+            <span class="competenza">{{ item }}</span>
+            {% endfor %}
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Competenze linguistiche</h2>
+      <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;" >
+        {% for item in data['competenze_linguistiche'] %}
+        <tr>
+          <td style="width: 150px; border-bottom: 2px solid gray ;">{{ item['lingua'] }}</td>
+          <td style="width: 350px; border-bottom: 2px solid gray ;">{{ item['voto'] }}</td>
+          <td style="width: 100%; float: right; border-bottom: 2px solid gray ;">{{ item['altro'] }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </section>
     </main>
 </body>
 </html>
