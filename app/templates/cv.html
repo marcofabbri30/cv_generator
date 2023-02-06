@@ -29,7 +29,6 @@
       border-radius: 1em;
       color:white;
       padding: 6px 10px;
-      font-family: Metropolis-Regular;
     }
     
   </style>
@@ -98,26 +97,26 @@
       <p style="display: inline;">Telefono:</p> <a href="tel:+393458201939">+39 345-8201393</a>
     </section> -->
     <section>
-      <h2>Profilo professionale:</h2>
-      <p>Appassionato di tecnologia, sono uno sviluppatore software e analista IT. Il mio obiettivo è migliorare e supportare i processi aziendali attraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, business intelligence e project management.</p>  
+      <h2>{{ data['profilo_professionale']['titolo'] }}</h2>
+      <p>{{ data.get('profilo_professionale').get('descrizione') }}</p>  
     </section>
     <section>
       <h2 class="title-section">Esperienze professionali:</h2>
       {% for item in data['esperienze_professionali'] %}
       <div>
-        <p class="role">poltronesofà - Software Engineer <span style="float: right;">03/2021 &rarr; presente</span></p>
-        <p>Forlì (FC) - Emilia-Romagna </p>
+        <p class="role">{{ item.get('posizione')}} <span style="float: right;">{{ item.get('periodo') }}</span></p>
+        <p>{{ item.get('luogo') }} </p>
         <ul>
+          {% for esp in item.get('esperienza') %}
           <li>
-            Analista e sviluppatore software per il miglioramento dei processi di business.
-            Sviluppo di microservizi per l'integrazione con i terzisti, i negozi, i servizi di
-            logistica, gestione e manutenzione del sito aziendale e dei servizi web.
+            {{ esp }}
           </li>
-          <li>Tecnologie utilizzate: FastAPI, Python, .Net Framework, Vue.js, database Oracle e Sql Server, Docker, sistema di versionamento Git e Gitlab, Flask, Apache Airflow, Linux</li>
-          <li>Sviluppo e manutenzione della Business Intelligence in Qlik Sense.</li>
+          {% endfor %}
         </ul>
       </div>
+
       <hr style="width: 90%;">
+      {% endfor %}
     </section>
     <section>
       <h2 class="title-section">Formazione:</h2>
@@ -154,11 +153,11 @@
       <h2>Competenze linguistiche</h2>
       <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;" >
         {% for item in data['competenze_linguistiche'] %}
-        <tr>
-          <td style="width: 150px; border-bottom: 2px solid gray ;">{{ item['lingua'] }}</td>
-          <td style="width: 350px; border-bottom: 2px solid gray ;">{{ item['voto'] }}</td>
-          <td style="width: 100%; float: right; border-bottom: 2px solid gray ;">{{ item['altro'] }}</td>
-        </tr>
+          <tr>
+            <td style="width: 150px; border-bottom: 2px solid gray ;">{{ item['lingua'] }}</td>
+            <td style="width: 350px; border-bottom: 2px solid gray ;">{{ item['voto'] }}</td>
+            <td style="width: 100%; float: right; border-bottom: 2px solid gray ;">{{ item['altro'] }}</td>
+          </tr>
         {% endfor %}
       </table>
     </section>
