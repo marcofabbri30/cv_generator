@@ -1,8 +1,12 @@
 data = {
+    'profilo_professionale':{
+        'titolo': 'Profilo professionale:',
+        'descrizione': "Appassionato di tecnologia, sono uno sviluppatore software e analista IT. Il mio obiettivo è migliorare e supportare i processi aziendali attraverso l'utilizzo di strumenti informatici. Mi occupo di sviluppo di software gestionali, microservizi e integrazione software, analisi dei processi, estrazione dati, business intelligence e project management"
+    },
     'esperienze_professionali': [
         {
             'posizione':'poltronesofà - Software Engineer',
-            'periodo':'03/2021 &rarr; presente',
+            'periodo':'03/2021 \u2192 presente',
             'luogo':'Forlì (FC) - Emilia-Romagna ',
             'esperienza':[
                 'Analista e sviluppatore software per il miglioramento dei processi di business. Sviluppo di microservizi per l\'integrazione con i terzisti, i negozi, i servizi di logistica, gestione e manutenzione del sito aziendale e dei servizi web.',
@@ -30,7 +34,7 @@ data = {
     ],
     'competenze_informatiche':{
         'linguaggi': ['Python', 'C#', 'SQL', 'Javascript'],
-        'tecnologie': ['FastAPI', 'Vue3', 'Flask', 'Qlik Sense'],
+        'tecnologie': ['FastAPI', 'Vue3', 'Flask', 'Qlik Sense','Linux','Oracle SQL','Visual Studio Code - 2019'],
     },
     'competenze_linguistiche': [
         {
