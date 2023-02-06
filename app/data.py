@@ -13,7 +13,18 @@ data = {
                 'Tecnologie utilizzate: FastAPI, Python, .Net Framework, Vue.js, database Oracle e Sql Server, Docker, sistema di versionamento Git e Gitlab, Flask, Apache Airflow, Linux',
                 'Sviluppo e manutenzione della Business Intelligence in Qlik Sense.'
             ]
+        },
+        {
+            'posizione':'Gruppo Global Sistemi - Software Engineer',
+            'periodo':'01/2021 \u2192 03/2021',
+            'luogo':'Forlì (FC) - Emilia-Romagna ',
+            'esperienza':[
+                'Sviluppo di soluzione software gestionali per il fleet management e per il project management.',
+                'Sviluppo di applicativi web basati su tecnologie .NET, Angular, gestione del database SQL Server. Sviluppo di integrazioni dati con altri software e componenti hardware.',
+                'Esecuzione dei test di qualità del prodotto e rilascio al cliente.'
+            ]
         }
+
     ],
     'formazione': [
         {
