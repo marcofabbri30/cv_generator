@@ -31,6 +31,9 @@
       padding: 6px 10px;
       line-height: 2;
     }
+    .role{
+      line-height: 1.2;
+    }
     
   </style>
 </head>
@@ -92,7 +95,7 @@
     </div>
   
     <section>
-      <h2>{{ data['profilo_professionale']['titolo'] }}</h2>
+      <h2 class="title-section">{{ data['profilo_professionale']['titolo'] }}</h2>
       <p>{{ data.get('profilo_professionale').get('descrizione') }}</p>  
     </section>
     <section>
@@ -104,7 +107,7 @@
         <p class="role">{{ item.get('posizione')}} - {{ item.get('luogo') }} </p>
         <ul>
           {% for esp in item.get('esperienza') %}
-          <li>
+          <li style="line-height: 1.2;">
             {{ esp }}
           </li>
           {% endfor %}
@@ -117,14 +120,14 @@
       <ul>
         {% for item in data['formazione'] %}
         <li>
-          <p><span style="font-family: Metropolis-Bold;">{{ item['titolo'] }}</span></p>
-          <p>{{ item['anno'] }} - {{ item['sede'] }}</p>
+          <p style="line-height: 1.2; margin-bottom: 0; padding-bottom: 0px;">{{ item['titolo'] }}</p>
+          <p style="margin-top: 0; line-height: 1.2;">{{ item['anno'] }} - {{ item['sede'] }}</p>
         </li>
         {% endfor %}
       </ul>
     </section>
     <section>
-      <h2>Competenze informatiche</h2>
+      <h2 class="title-section">Competenze informatiche</h2>
       <table style="border-collapse: separate; border-spacing: 0 15px;">
         <tr style="border-spacing:10px;">
           <td style="width: 120px;">Linguaggi:</td>
@@ -144,7 +147,7 @@
       </table>
     </section>
     <section>
-      <h2>Competenze linguistiche</h2>
+      <h2 class="title-section">Competenze linguistiche</h2>
       <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;" >
         {% for item in data['competenze_linguistiche'] %}
           <tr>
