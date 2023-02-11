@@ -33,6 +33,8 @@
     }
     .role{
       line-height: 1.2;
+      margin: 0;
+      border-bottom: 0;
     }
     
   </style>
@@ -102,12 +104,12 @@
       <h2 class="title-section">Esperienze professionali:</h2>
       {% for item in data['esperienze_professionali'] %}
       <div style="position:relative"> 
-        <div style="position: absolute; top:0; right: 0; height: 50px; width: auto;">
+        <div style="position: absolute; top:-5px; right: 0; height: 50px; width: auto;">
           <img src="http://localhost:8000{{item.get('logo')}}" alt="logo" height="50" />
         </div>
-        <p class="role">{{ item.get('periodo') }}</p>
-        <p class="role">{{ item.get('posizione')}} - {{ item.get('luogo') }} </p>
-        <ul>
+        <p class="role" style="width: 650px; font-family: Metropolis-Bold; margin-top: 0.5em;">{{ item.get('posizione')}}</p>
+        <p class="role">{{ item.get('periodo') }} - {{ item.get('luogo') }}</p>
+        <ul style="margin-top:0.2em; margin-bottom: 0.2em;">
           {% for esp in item.get('esperienza') %}
           <li style="line-height: 1.2;">
             {{ esp }}
@@ -122,8 +124,14 @@
       <ul>
         {% for item in data['formazione'] %}
         <li>
-          <p style="line-height: 1.2; margin-bottom: 0; padding-bottom: 0px;">{{ item['titolo'] }}</p>
-          <p style="margin-top: 0; line-height: 1.2;">{{ item['anno'] }} - {{ item['sede'] }}</p>
+          <div style="position: relative;">
+            <div style="position: absolute; top: 0; right: 0;">
+              <img src="http://localhost:8000/static/logo/{{item.get('logo')}}" alt="">
+            </div>
+            <p style="line-height: 1.2; margin-bottom: 0; padding-bottom: 0px; font-family: Metropolis-Bold;">{{ item['titolo'] }}</p>
+            <p style="line-height: 1.2; margin-bottom: 0; margin-top: 0; padding-bottom: 0px; font-family: Metropolis-Bold;">{{ item['categoria'] }}</p>
+            <p style="margin-top: 0; line-height: 1.2;">{{ item['anno'] }} - {{ item['sede'] }}</p>
+          </div>
         </li>
         {% endfor %}
       </ul>

@@ -6,7 +6,7 @@ data = {
     'esperienze_professionali': [
         {
             'posizione':'poltronesofà - Software Engineer',
-            'logo': '/static/logo/logo_pes.png',
+            'logo': '/static/logo/logo_pes - Copia.png',
             'periodo':'03/2021 \u2192 presente',
             'luogo':'Forlì (FC) - Emilia-Romagna ',
             'esperienza':[
@@ -17,7 +17,7 @@ data = {
         },
         {
             'posizione':'Gruppo Global Sistemi - Software Engineer',
-            'logo': '/static/logo/vanguard-system-logo.png',
+            'logo': '/static/logo/vanguard-system-logo - Copia.png',
             'periodo':'01/2021 \u2192 03/2021',
             'luogo':'Forlì (FC) - Emilia-Romagna ',
             'esperienza':[
@@ -28,7 +28,7 @@ data = {
         },
         {
             'posizione':'Onit Group SRL - Full Stack Software Developer & Analyst, Healthcare Solution,',
-            'logo': '/static/logo/onit_it_experience.png',
+            'logo': '/static/logo/onit_it_experience - Copia.png',
             'periodo':'11/2017 \u2192 12/2020',
             'luogo':'Cesena (FC) - Emilia-Romagna ',
             'esperienza':[
@@ -42,7 +42,7 @@ data = {
         },
         {
             'posizione':'Engineering, Ingegneria Informatica SPA - Consulente Applicativo - Product Specialist - Healthcare Solution,',
-            'logo': '/static/logo/logo_pes.png',
+            'logo': '/static/logo/enginnering.png',
             'periodo':'05/2017 \u2192 11/2017',
             'luogo':'Cesena (FC) - Emilia-Romagna ',
             'esperienza':[
@@ -57,17 +57,22 @@ data = {
     ],
     'formazione': [
         {
-            'titolo': 'Laurea Magistrale in Ingegneria Biomedica (110/110) LM-21 Ingegneria Biomedica',
+            'titolo': 'Laurea Magistrale in Ingegneria Biomedica (110/110)',
+            'logo': 'unibo - Copia.png',
+            'categoria': 'LM-21 Ingegneria Biomedica',
             'anno': 2017,
             'sede':  'Università di Bologna - Sede di Cesena'
         },
         {
-            'titolo': 'Laurea triennale in Ingegneria Biomedica (110/110) LM-8 Ingegneria dell\'Informazione',
+            'titolo': 'Laurea triennale in Ingegneria Biomedica',
+            'logo': 'unibo - Copia.png',
+            'categoria': 'LM-8 Ingegneria dell\'Informazione',
             'anno': 2013,
             'sede':  'Università di Bologna - Sede di Cesena'
         },
         {
-            'titolo': 'Diploma di liceo scientifico - indirizzo bilinguismo inglese/tedesco',
+            'titolo': 'Diploma di liceo scientifico',
+            'categoria': 'Indirizzo bilinguismo inglese/tedesco',
             'anno': 2010,
             'sede':  'Liceo Scientifico A. Einstein - Rimini (RN)'
         }
