@@ -66,7 +66,7 @@ data = {
         {
             'titolo': 'Laurea triennale in Ingegneria Biomedica',
             'logo': 'unibo - Copia.png',
-            'categoria': 'LM-8 Ingegneria dell\'Informazione',
+            'categoria': 'L-8 Ingegneria dell\'Informazione',
             'anno': 2013,
             'sede':  'Università di Bologna - Sede di Cesena'
         },
